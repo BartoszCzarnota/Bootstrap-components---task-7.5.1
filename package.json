@@ -21,11 +21,13 @@
   "homepage": "https://github.com/BartoszCzarnota/Bootstrap-components---task-7.5.1#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-uglify": "^2.2.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-imageoptim": "^1.4.3",
-    "grunt-sass": "^2.0.0"
+    "grunt-sass": "^2.0.0",
+    "uuid": "^3.0.1"
   }
 }
