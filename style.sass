@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900')
+
+$black: #000
+$black2: rgba(0, 0, 0, 0.5)
+$white: #fff
+$blue: #00C7E8
+$lightgrey: #8b8b8d
+$lightgrey2: rgba(77, 77, 77, 0.4)
+$darkgrey1: #313234
+$darkgrey2: #313135
+$darkgrey3: #18181b
+
+* 
+	box-sizing: border-box
+
+body
+	margin: 0
+	font-family: 'Open Sans', sans-serif
+
+	/* CONTAINER */
+
+.container
+	max-width: 1200px
+	margin: 0 auto
+	width: 100%
+
+	/* CLEARFIX */
+.clearfix
+	content: " "
+	display: table
+	clear: both
+.row
+	&:before 
+		@extend .clearfix
+	&:after
+		@extend .clearfix
+
+	/* HEADER */
+
+header
+	background-color: $darkgrey1
+	height: 50px
+	nav
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			float: right
+			li
+				display: inline-block
+				a
+					line-height: 50px
+					padding: 0 20px
+					display: block
+					color: $white
+					text-decoration: none
+					text-transform: uppercase
+					&:hover
+						transition-duration: 0.4s
+						color: $blue
+		img 
+			padding: 10px 0
+
+	/* HERO */
+
+.hero
+	width: 100%
+	height: 650px
+	background-image: url("https://images.pexels.com/photos/170/apple-laptop-notebook-notes.jpg?w=940&h=650&auto=compress&cs=tinysrgb")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	background-attachment: fixed
+
+
+.slogan 
+	background-color: $lightgrey2
+	float: right
+	max-width: 1000px
+	padding: 15px 150px 15px 15px
+	color: $white
+	margin-top: 150px
+
+.slogan-headers
+	font-size: 2.5rem
+	line-height: 80%
+	text-transform: uppercase
+	margin-top: 10px
+
+.slogan
+	h1
+		@extend .slogan-headers
+		font-weight: 100
+	h2
+		@extend .slogan-headers
+		font-weight: 700
+
+	/* BENEFITS */
+
+[class*="col-"]
+	float: left
+	min-height: 1px
+	padding-bottom: 20px
+	border: 0.5px
+.col-1
+	width: 8.33%
+.col-2
+	width: 16.66%   
+.col-3
+	width: 25%
+.col-4
+	width: 33.33%  
+.col-5
+	width: 41.66%
+.col-6
+	width: 50%
+.col-7
+	width: 58.33%
+.col-8
+	width: 66.66%
+.col-9
+	width: 75%
+.col-10
+	width: 83.33%
+.col-11
+	width: 91.66%
+.col-12
+	width: 100%
+.col-offset-0
+	margin-left: 0
+.col-offset-1
+	margin-left: 8.33%
+.col-offset-2
+	margin-left: 16.66%
+.col-offset-3
+	margin-left: 25%
+.col-offset-4
+	margin-left: 33.33%
+.col-offset-5
+	margin-left: 41.66%
+.col-offset-6
+	margin-left: 50%
+.col-offset-7
+	margin-left: 58.33%
+.col-offset-8
+	margin-left: 66.66%
+.col-offset-9
+	margin-left: 75%
+.col-offset-10
+	margin-left: 83.33%
+.col-offset-11
+	margin-left: 91.66%
+.col-offset-12
+	margin-left: 100%
+
+section
+	>.container
+		margin: 50px auto
+		text-align: center
+
+.benefits
+	.fa
+		font-size: 80px
+		padding: 30px
+		color: $white
+		background-color: $darkgrey2
+		margin-bottom: 20px
+		border-radius: 25px
+	a
+		text-decoration: none
+		text-transform: uppercase
+		color: $darkgrey2
+		&:hover
+			.fa
+				background-color: $blue
+				transition-duration: 0.5s
+				cursor: pointer
+		&:hover
+			color: $blue
+			transition-duration: 0.5s
+			cursor: pointer
+	p
+		color: $lightgrey
+		margin: 0 auto
+		padding-top: 50px
+	h3
+		margin: 0 auto
+
+.works
+	h1
+		text-align: center
+		text-transform: uppercase
+		color: $darkgrey2
+		font-weight: 800
+		font-size: 45px
+
+	p
+		text-align: center
+		color: $lightgrey
+		font-size: 17px
+
+	/* GALLERY */
+
+.gallery
+	[class*="col-"]
+		padding: 0
+
+.picture-small
+	height: 200px
+	background-size: cover
+	background-repeat: no-repeat
+	max-width: 33.33%
+	background-position: center center
+	position: relative
+
+.picture-big
+	height: 200px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	max-width: 66.66%
+	position: relative
+
+.nysmall
+	background-image: url("https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?format&fit=crop&w=350&h=200")
+	@extend .picture-small
+
+.apple
+	background-image: url("https://images.pexels.com/photos/170/apple-laptop-notebook-notes.jpg?w=940&h=650&auto=compress&cs=tinysrgb")
+	@extend .picture-small
+
+.girl
+	background-image: url("https://images.unsplash.com/reserve/RONyPwknRQOO3ag4xf3R_Kinsey.jpg")
+	@extend .picture-small
+
+.bussmall
+	background-image: url("https://images.pexels.com/photos/5117/people-feet-train-travelling.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
+	@extend .picture-small
+
+.nybig
+	background-image: url("https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg")
+	@extend .picture-big
+
+.busbig
+	background-image: url("https://images.pexels.com/photos/5117/people-feet-train-travelling.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
+	@extend .picture-big
+
+.layer-picture
+	position: absolute
+	width: 100%
+	height: 100%
+	line-height: 200px
+	color: $black
+	display: flex
+	justify-content: center
+	align-items: center
+
+.layer:hover
+	background: $black2
+	position: absolute
+	width: 100%
+	height: 100%
+
+.nysmall .layer
+	@extend .layer-picture
+
+.nysmall i
+	visibility: hidden
+	font-size: 25px
+
+.layer-picture-hover
+	background-color: $black2
+	cursor: pointer
+	transition-duration: 0.8s
+
+.nysmall .layer:hover
+	@extend .layer-picture-hover
+
+.picture-hover-i-fa
+	visibility: visible
+	background-color: $white
+	margin: 10px
+	padding: 4px
+	border-radius: 15%
+	
+.picture-i-fa
+	visibility: hidden
+	font-size: 25px
+
+.nysmall:hover i
+	@extend .picture-hover-i-fa
+
+.apple .layer
+	@extend .layer-picture
+
+.apple i
+	@extend .picture-i-fa
+
+.apple .layer:hover
+	@extend .layer-picture-hover
+
+.apple:hover i
+	@extend .picture-hover-i-fa
+
+.girl .layer
+	@extend .layer-picture
+
+.girl i
+	@extend .picture-i-fa
+
+.girl .layer:hover
+	@extend .layer-picture-hover
+
+.girl:hover i
+	@extend .picture-hover-i-fa
+
+.bussmall .layer
+	@extend .layer-picture
+
+.bussmall i
+	@extend .picture-i-fa
+	
+.bussmall .layer:hover
+	@extend .layer-picture-hover
+
+.bussmall:hover i
+	@extend .picture-hover-i-fa
+
+.nybig .layer
+	@extend .layer-picture
+
+.nybig i
+	@extend .picture-i-fa
+
+.nybig .layer:hover
+	@extend .layer-picture-hover
+
+.nybig:hover i
+	@extend .picture-hover-i-fa
+
+.busbig .layer
+	@extend .layer-picture
+
+.busbig i
+	@extend .picture-i-fa
+
+.busbig .layer:hover
+	@extend .layer-picture-hover
+
+.busbig:hover i
+	@extend .picture-hover-i-fa
+
+	/* TEAM */
+
+.team
+	[class*="col-"]
+		padding: 0
+	img
+		border-radius: 50%
+		width: 100%
+		height: 100%
+		display: block
+		object-fit: cover
+	h2
+		color: $lightgrey
+		text-align: center
+
+.circle
+	position: relative
+	height: 240px
+	width: 240px
+	margin: 0 auto
+
+.circle-layer
+	position: absolute
+	width: 100%
+	height: 100%
+	line-height: 240px
+	text-align: center
+	border-radius: 50%
+	color: $white
+	display: flex
+	justify-content: center
+	align-items: center
+	h3
+		visibility: hidden
+		font-size: 25px
+	&:hover
+		background-color: $black2
+		cursor: pointer
+		transition-duration: 0.8s
+		h3
+			visibility: visible
+
+	/* PICTURE */
+
+.picture
+	[class*="col-"]
+		padding: 0
+		float: left
+		min-height: 1px
+		padding-bottom: 20px
+		border: 0.5px
+
+.picture
+	background-color: $lightgrey
+	height: 370px
+	width: 100%
+
+.ipad img
+	float: left
+	width: 100%
+	max-height: 350px
+	display: block
+	padding: 60px 10px
+
+.title-picture
+	h2
+		padding-top: 25px
+		text-transform: uppercase
+		text-align: center
+		font-size: 35px
+		font-weight: 700
+		color: $white
+	p
+		color: $white
+		padding: 0 10px
+
+	/* NUMBERS */
+
+.numbers 
+	margin: 0 auto
+	width: 100%
+	max-height: 300px
+	display: block
+	[class*="col-"]
+		padding: 0
+	h3
+		text-align: center
+		text-transform: uppercase
+		color: $darkgrey2
+		font-weight: 900
+		font-size: 75px
+		font-family: 'Raleway', sans-serif
+		margin-bottom: 5px
+	h4
+		text-transform: uppercase
+		color: $blue
+		font-size: 20px
+		font-weight: 700
+		line-height: 20px
+		margin-top: 15px
+
+	/* CONTACT */
+
+.contact-us
+	float: left
+	background-color: $darkgrey1
+	width: 100%
+	height: 460px
+	color: $white
+	display: block
+	position: center
+	[class*="col-"]
+		text-align: left
+		font-family: 'Raleway', sans-serif
+	h2
+		text-align: left
+		text-transform: uppercase
+		font-size: 30px
+		padding: 15px 8px
+		&:after
+			padding-left: 10px
+			letter-spacing: -3px
+			content: "--------------"
+			color: $white
+	p
+		color: $white
+		letter-spacing: 2px
+		font-size: 15px
+		font-weight: 500
+
+.social
+	i
+		text-align: center
+		font-size: 20px
+		height: 40px
+		width: 40px
+		color: $white
+		padding: 10px
+		margin: 20px 15px 0 0
+		background-color: $blue
+		float: left
+		&:hover
+			background-color: $white
+			color: $blue
+			transition: 0.6s
+			cursor: pointer
+
+	/* FOOTER */
+
+footer
+	text-align: center
+	background-color: $darkgrey3
+	font-size: 20px
+	line-height: 60px
+	color: $white
+	p 
+		margin: 0
+
+	/* MEDIA QUERIES */
+	
+	/* For desktop: */
+
+@media (min-width: 768px) and (max-width: 1199px)
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+	.col-offset-m-0
+		margin-left: 0
+
+	/* HEADER */
+
+	header
+		height: auto
+	
+	/* HERO */
+	
+	.hero
+		height: 60vh
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	
+	.slogan
+		max-width: 80%
+		margin-top: 75px
+		h1
+			font-size: 30px
+		h2
+			font-size: 30px
+	
+	/* BENEFITS */
+	
+	.benefits
+		p
+			padding: 2.5%
+	
+	.works
+		padding: 5%
+		p
+			padding: 2.5%
+	
+	/* GALLERY */
+	
+	.team
+		[class*="col-"]
+			padding: 0
+			width: 50%
+		h2
+			font-size: 22px
+			
+	.circle
+		height: 200px
+		width: 200px
+	
+	/* NUMBERS */
+	
+	.numbers
+		h3
+			font-size: 39px
+		h4
+			font-size: 22px
+	
+	/* CONTACT */
+	
+	.contact-us
+		height: auto
+		[class*="col-"]
+			padding: 0.7%
+		h2
+			font-size: 22px
+			&:after
+				padding-left: 10px
+				letter-spacing: -3px
+				content: "-------"
+				color: $white
+		h4
+			font-size: 15px	
+		p
+			font-size: 11.5px	
+	
+	.social i
+		font-size: 16px
+		height: 34px
+		width: 34px
+	
+	/* FOOTER */
+	
+	footer
+		height: auto
+		max-width: 100%
+		p
+			font-size: 15px
+		
+	/*FOR TABLETS*/
+
+@media (max-width: 767px)
+	.col-s-1 
+		width: 8.33%
+	.col-s-2
+		width: 16.66%
+	.col-s-3
+		width: 25%
+	.col-s-4
+		width: 33.33%
+	.col-s-5
+		width: 41.66%
+	.col-s-6
+		width: 50%
+	.col-s-7
+		width: 58.33%
+	.col-s-8
+		width: 66.66%
+	.col-s-9
+		width: 75%
+	.col-s-10
+		width: 83.33%
+	.col-s-11
+		width: 91.66%
+	.col-s-12
+		width: 100%
+	.col-offset-s-0
+		margin-left: 0	
+	[class*="col-"]
+		float: left
+		width: 100%
+		padding: 12px
+	
+	/*HEADER*/
+	header
+		height: auto
+		position: relative
+		nav
+			ul
+				margin: 0
+				padding: 0
+				float: none
+				li
+					display: block
+					text-align: center
+					font-weight: 600
+					a
+						line-height: 40px
+						font-size: 100%
+			img 
+				display: block
+				margin: 0 auto
+	
+	/* HERO */
+	.hero
+		height: 80vh
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	
+	.slogan
+		max-width: 100%
+		margin-top: 50px
+		h1
+			font-size: 25px
+		h2
+			font-size: 25px
+	
+	/* BENEFITS */
+	
+	.benefits p
+		padding: 10%
+	
+	/* GALLERY */
+	
+	.picture-small-width
+		max-width: 50%
+		
+	.picture-big-width
+		max-width: 100%
+		
+	.nysmall
+		@extend .picture-small-width
+	
+	.apple
+		@extend .picture-small-width
+	
+	.girl
+		@extend .picture-small-width
+	
+	.bussmall
+		@extend .picture-small-width
+	
+	.nybig
+		@extend .picture-big-width
+	
+	.busbig
+		@extend .picture-big-width
+	
+	/* TEAM */
+	
+	.team
+		[class*="col-"]
+			padding: 0
+			width: 50%
+		h2
+			font-size: 18px
+	
+	.circle
+		height: 120px
+		width: 120px
+	
+	/* PICTURE */
+	
+	.picture
+		max-width: 100%
+		height: auto
+	
+	.ipad
+		img
+			max-width: 100%
+			height: auto
+			padding: 5% 5%
+	
+	.title-picture
+		h2
+			font-size: 15px
+			padding-top: 1%
+		p
+			font-size: 13px
+			padding: 0 5%
+	
+	/* NUMBERS */
+	
+	.numbers
+		[class*="col-"]
+			padding: 0
+			width: 50%
+		h3
+			font-size: 25px
+		h4
+			font-size: 15px
+			line-height: 5px
+	
+	/*CONTACT*/
+	
+	.contact-us
+		text-align: center
+		height: auto
+		[class*="col-"]
+			padding: 0
+			width: 100%	
+		h2
+			font-size: 15px
+			padding-top: 5px
+			padding-bottom: 5px
+			text-align: center
+			&:before
+				padding-right: 10px
+				letter-spacing: -3px
+				content: "-------"
+				color: $white
+			&:after
+				padding-left: 10px
+				letter-spacing: -3px
+				content: "-------"
+				color: $white
+		h4
+			text-align: center
+		p
+			font-size: 12px
+			text-align: center
+	
+	.social
+		i
+			text-align: center
+			font-size: 19px
+			margin: 20px 10px 0 10px
+	
+	/* FOOTER */
+	
+	footer
+		height: auto
+		max-width: 100%
+		p
+			font-size: 17px
